@@ -57,10 +57,9 @@ namespace SnakeAndLadder
                 }
                 while (this.user1 > 100)
                 {
-                    //this.user1 = this.user1 - this.countStop1[this.countStop1.Count - 1];
                     Console.WriteLine($"Greater than 100 : {this.countStop1[this.countStop1.Count-1]}");
                     this.user1 = this.user1 - this.countStop1[this.countStop1.Count - 1];
-                    Console.WriteLine($"Back from 100 : {this.user1}");
+                    Console.WriteLine($"After Greater than 100 Position Will : {this.user1}");
                     break;
                 }
 
@@ -71,7 +70,7 @@ namespace SnakeAndLadder
         void show()
         {
             Console.WriteLine($"Dies Roll Out {this.countStop1.Count} Times");
-            Console.WriteLine($"Current Position : {this.user1}");
+            Console.WriteLine($"Winning Position : {this.user1}");
                 foreach(int i in this.countStop1)
             {
                 Console.Write($"{i},");
