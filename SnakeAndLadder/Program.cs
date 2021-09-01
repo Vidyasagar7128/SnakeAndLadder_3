@@ -10,7 +10,8 @@ namespace SnakeAndLadder
         List<int> countStop1 = new List<int>();
         void firstDies()
         {
-            Console.WriteLine($"Starting Position : {this.user1}");
+            int rand = new Random().Next(1, 7);
+            Console.WriteLine($"Dies is : {rand}");
         }
         
         static void Main(string[] args)
