@@ -15,8 +15,10 @@ namespace SnakeAndLadder
                 int rand = new Random().Next(1, 7);
                 this.user1 = this.user1 + rand;
                 this.countStop1.Add(rand);
+                Console.WriteLine($"Dies Roll =========== {rand}");
+                Console.WriteLine($"User 1 Reach : {this.user1}");
                 ////////////Code for ladder
-                if(this.user1 == 15)
+                if (this.user1 == 15)
                 {
                     Console.WriteLine($"From : {this.user1}");
                     this.user1 = 36;
@@ -53,13 +55,22 @@ namespace SnakeAndLadder
                     this.user1 = 72;
                     Console.WriteLine($"Snake Pass : {this.user1}");
                 }
-                this.count++;
+                while (this.user1 > 100)
+                {
+                    //this.user1 = this.user1 - this.countStop1[this.countStop1.Count - 1];
+                    Console.WriteLine($"Greater than 100 : {this.countStop1[this.countStop1.Count-1]}");
+                    this.user1 = this.user1 - this.countStop1[this.countStop1.Count - 1];
+                    Console.WriteLine($"Back from 100 : {this.user1}");
+                    break;
+                }
+
+                    this.count++;
             }
 
         }
         void show()
         {
-                Console.WriteLine(this.countStop1.Count);
+            Console.WriteLine($"Dies Roll Out {this.countStop1.Count} Times");
             Console.WriteLine($"Current Position : {this.user1}");
                 foreach(int i in this.countStop1)
             {
