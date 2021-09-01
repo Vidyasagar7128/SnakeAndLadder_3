@@ -21,8 +21,16 @@ namespace SnakeAndLadder
                 Console.WriteLine($"User 1 Reach : {this.user1}");
                 if (this.user1 == 100 || this.user2 == 100)
                 {
-                    Console.WriteLine(":::::::::::::::::::::::Winner is USER 1:::::::::::::::::::::::::::");
-                    break;
+                    if(this.user1 == 100)
+                    {
+                        Console.WriteLine(":::::::::::::::::::::::Winner is USER 1:::::::::::::::::::::::::::");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine(":::::::::::::::::::::::Winner is USER 2:::::::::::::::::::::::::::");
+                        break;
+                    }
                 }
                 ////////////Code for ladder
                 if (this.user1 == 15)
