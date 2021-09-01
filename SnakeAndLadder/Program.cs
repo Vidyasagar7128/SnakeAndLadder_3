@@ -10,7 +10,7 @@ namespace SnakeAndLadder
         List<int> countStop1 = new List<int>();
         void firstDies()
         {
-            Console.WriteLine("Snake And Ladders...");
+            Console.WriteLine($"Starting Position : {this.user1}");
         }
         
         static void Main(string[] args)
