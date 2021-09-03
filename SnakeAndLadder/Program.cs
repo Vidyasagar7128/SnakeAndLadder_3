@@ -41,20 +41,13 @@ namespace SnakeAndLadder
                     Console.WriteLine($"After Greater than 100 Position Will : {this.user1}");
                     break;
                 }
-
                     this.count++;
-
-                
-
                 if (this.count % 2 == 0)
                 {
                     secondDies();
                     break;
                 }
-
-                
             }
-
         }
         void secondDies()
         {
@@ -66,9 +59,7 @@ namespace SnakeAndLadder
                 Console.WriteLine($"Dies Roll ::::: {rand}");
                 Console.WriteLine($"User 2 Reach : {this.user2}");
                 ////////////Code for ladder and Snake
-
                 ladderAndSnake(this.user2);
-
                 while (this.user2 > 100)
                 {
                     Console.WriteLine($"Greater than 100 : {this.countStop2[this.countStop2.Count - 1]}");
@@ -76,7 +67,6 @@ namespace SnakeAndLadder
                     Console.WriteLine($"After Greater than 100 Position Will : {this.user2}");
                     break;
                 }
-
                 this.count++;
                 if (this.count % 2 != 0)
                 {
@@ -137,11 +127,7 @@ namespace SnakeAndLadder
             {
                 Console.Write($"{i},");
             }
-
-
         }
-
-
         static void Main(string[] args)
         {
             Program obj = new Program();
