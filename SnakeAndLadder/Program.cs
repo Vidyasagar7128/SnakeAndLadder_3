@@ -33,10 +33,10 @@ namespace SnakeAndLadder
                     }
                 }
                 ////////////Code for ladder
-                ladderAndSnake(this.user2);
+                ladderAndSnake(this.user1);
                 while (this.user1 > 100)
                 {
-                    Console.WriteLine($"Greater than 100 : {this.countStop1[this.countStop1.Count-1]}");
+                    Console.WriteLine($"Greater than 100 Dies was : {this.countStop1[this.countStop1.Count-1]}");
                     this.user1 = this.user1 - this.countStop1[this.countStop1.Count - 1];
                     Console.WriteLine($"After Greater than 100 Position Will : {this.user1}");
                     break;
@@ -62,7 +62,7 @@ namespace SnakeAndLadder
                 ladderAndSnake(this.user2);
                 while (this.user2 > 100)
                 {
-                    Console.WriteLine($"Greater than 100 : {this.countStop2[this.countStop2.Count - 1]}");
+                    Console.WriteLine($"Greater than 100  Dies was : {this.countStop2[this.countStop2.Count - 1]}");
                     this.user2 = this.user2 - this.countStop2[this.countStop2.Count - 1];
                     Console.WriteLine($"After Greater than 100 Position Will : {this.user2}");
                     break;
