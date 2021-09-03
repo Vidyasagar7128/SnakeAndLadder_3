@@ -33,43 +33,7 @@ namespace SnakeAndLadder
                     }
                 }
                 ////////////Code for ladder
-                if (this.user1 == 15)
-                {
-                    Console.WriteLine($"From : {this.user1}");
-                    this.user1 = 36;
-                    Console.WriteLine($"Ladder Pass : {this.user1}");
-                }
-                if (this.user1 == 45)
-                {
-                    Console.WriteLine($"From : {this.user1}");
-                    this.user1 = 81;
-                    Console.WriteLine($"Ladder Pass : {this.user1}");
-                }
-                if (this.user1 == 71)
-                {
-                    Console.WriteLine($"From : {this.user1}");
-                    this.user1 = 87;
-                    Console.WriteLine($"Ladder Pass : {this.user1}");
-                }
-                ////////////Code for Snake
-                if (this.user1 == 39)
-                {
-                    Console.WriteLine($"From : {this.user1}");
-                    this.user1 = 19;
-                    Console.WriteLine($"Snake Pass : {this.user1}");
-                }
-                if (this.user1 == 72)
-                {
-                    Console.WriteLine($"From : {this.user1}");
-                    this.user1 = 29;
-                    Console.WriteLine($"Snake Pass : {this.user1}");
-                }
-                if (this.user1 == 91)
-                {
-                    Console.WriteLine($"From : {this.user1}");
-                    this.user1 = 72;
-                    Console.WriteLine($"Snake Pass : {this.user1}");
-                }
+                ladderAndSnake(this.user2);
                 while (this.user1 > 100)
                 {
                     Console.WriteLine($"Greater than 100 : {this.countStop1[this.countStop1.Count-1]}");
@@ -101,44 +65,10 @@ namespace SnakeAndLadder
                 this.countStop2.Add(rand);
                 Console.WriteLine($"Dies Roll ::::: {rand}");
                 Console.WriteLine($"User 2 Reach : {this.user2}");
-                ////////////Code for ladder
-                if (this.user2 == 15)
-                {
-                    Console.WriteLine($"From : {this.user2}");
-                    this.user2 = 36;
-                    Console.WriteLine($"Ladder Pass : {this.user2}");
-                }
-                if (this.user2 == 45)
-                {
-                    Console.WriteLine($"From : {this.user2}");
-                    this.user2 = 81;
-                    Console.WriteLine($"Ladder Pass : {this.user2}");
-                }
-                if (this.user2 == 71)
-                {
-                    Console.WriteLine($"From : {this.user2}");
-                    this.user2 = 87;
-                    Console.WriteLine($"Ladder Pass : {this.user2}");
-                }
-                ////////////Code for Snake
-                if (this.user2 == 39)
-                {
-                    Console.WriteLine($"From : {this.user2}");
-                    this.user2 = 19;
-                    Console.WriteLine($"Snake Pass : {this.user2}");
-                }
-                if (this.user2 == 72)
-                {
-                    Console.WriteLine($"From : {this.user2}");
-                    this.user2 = 29;
-                    Console.WriteLine($"Snake Pass : {this.user2}");
-                }
-                if (this.user2 == 91)
-                {
-                    Console.WriteLine($"From : {this.user2}");
-                    this.user2 = 72;
-                    Console.WriteLine($"Snake Pass : {this.user2}");
-                }
+                ////////////Code for ladder and Snake
+
+                ladderAndSnake(this.user2);
+
                 while (this.user2 > 100)
                 {
                     Console.WriteLine($"Greater than 100 : {this.countStop2[this.countStop2.Count - 1]}");
@@ -155,11 +85,60 @@ namespace SnakeAndLadder
                 }
             }
         }
-
+        /// <summary>
+        /// ////////////////////////Ladder snake
+        /// </summary>
+        void ladderAndSnake(int snakeladder)
+        {
+            if (snakeladder == 15)
+            {
+                Console.WriteLine($"From : {snakeladder}");
+                this.user2 = 36;
+                Console.WriteLine($"Ladder Pass : {snakeladder}");
+            }
+            if (snakeladder == 45)
+            {
+                Console.WriteLine($"From : {snakeladder}");
+                snakeladder = 81;
+                Console.WriteLine($"Ladder Pass : {snakeladder}");
+            }
+            if (snakeladder == 71)
+            {
+                Console.WriteLine($"From : {snakeladder}");
+                snakeladder = 87;
+                Console.WriteLine($"Ladder Pass : {snakeladder}");
+            }
+            ////////////Code for Snake
+            if (snakeladder == 39)
+            {
+                Console.WriteLine($"From : {snakeladder}");
+                snakeladder = 19;
+                Console.WriteLine($"Snake Pass : {snakeladder}");
+            }
+            if (snakeladder == 72)
+            {
+                Console.WriteLine($"From : {snakeladder}");
+                snakeladder = 29;
+                Console.WriteLine($"Snake Pass : {snakeladder}");
+            }
+            if (snakeladder == 91)
+            {
+                Console.WriteLine($"From : {snakeladder}");
+                snakeladder = 72;
+                Console.WriteLine($"Snake Pass : {snakeladder}");
+            }
+        }
+        /// ////////////////////////Ladder snake
         void show()
         {
             Console.WriteLine($"Dies Roll Out from User 1 :::::: {this.countStop1.Count} ::::: Times");
             Console.WriteLine($"Dies Roll Out from User 2 :::::: {this.countStop2.Count} ::::: Times");
+            foreach(int i in this.countStop1)
+            {
+                Console.Write($"{i},");
+            }
+
+
         }
 
 
